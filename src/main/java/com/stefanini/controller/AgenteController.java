@@ -44,11 +44,11 @@ public class AgenteController {
 	 	}
 	 	
 	 	@POST
-	 	@Path("deletar/{id}")
+	 	@Path("/deletar")
 	 	@Consumes(MediaType.APPLICATION_JSON)
 	 	@Produces(MediaType.APPLICATION_JSON)
-	 	public void put(Integer id){
-	 		this.agenteService.remover(id);
+	 	public void delete(Agente agente){
+	 		this.agenteService.remover(agente.getIdAgente());
 	 	}
 	 	
 	 	
